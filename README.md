@@ -4,6 +4,7 @@ The code generates:
 1. **Extracellular potential $V_e$** produced by a disk electrode on the pia mater and the corresponding **mirror‐estimate $\Delta V_m$** for multiple neuron types **(Fig. 2A–B)**.
 2. **Population‐level heatmaps** via weighted‐sum interpolation of soma potentials, and **layer‐wise averages** as a function of lateral distance **(Fig. 2C–E)**.
 
+Written and maintained by Runming (Tony) Wang and Gene Fridman, August 2024 - June 2025.
 ---
 
 ## Prerequisites
