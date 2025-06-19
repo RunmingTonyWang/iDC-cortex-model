@@ -5,6 +5,7 @@ The code generates:
 2. **Population‐level heatmaps** via weighted‐sum interpolation of soma potentials, and **layer‐wise averages** as a function of lateral distance **(Fig. 2C–E)**.
 
 Written and maintained by Runming (Tony) Wang and Gene Fridman, August 2024 - June 2025.
+
 ---
 
 ## Prerequisites
