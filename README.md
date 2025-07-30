@@ -1,8 +1,8 @@
 # iDC-cortex-model
 This is a morphological approximation model that investigates how ionic direct current (iDC) stimulation modulates the membrane potential in rat cortical neurons. 
 The code generates:
-1. **Extracellular potential $V_e$** produced by a disk electrode on the pia mater and the corresponding **mirror‐estimate $\Delta V_m$** for multiple neuron types **(Fig. 2A–B)**.
-2. **Population‐level heatmaps** via weighted‐sum interpolation of soma potentials, and **layer‐wise averages** as a function of lateral distance **(Fig. 2C–E)**.
+1. **Extracellular potential $V_e$** produced by a disk electrode on the pia mater and the corresponding **mirror‐estimate $\Delta V_m$** for multiple neuron types **(Fig. 3A–B)**.
+2. **Population‐level heatmaps** via weighted‐sum interpolation of soma potentials, and **layer‐wise averages** as a function of lateral distance **(Fig. 3C–E)**.
 
 Written and maintained by Runming Wang and Gene Fridman, August 2024 - June 2025.
 
@@ -20,7 +20,7 @@ Written and maintained by Runming Wang and Gene Fridman, August 2024 - June 2025
 
 All code is contained in a single MATLAB script (iDC_paper_model.m) with two independent sections. You can run each section in isolation by selecting its code block and pressing **Run Section** (in the MATLAB Editor) or by copying it into the Command Window.
 
-### Section 1: Ve & ΔVm for Neuron Types (Fig. 2A–B)
+### Section 1: Ve & ΔVm for Neuron Types (Fig. 3A–B)
 
 This section computes and plots:
 
@@ -34,7 +34,7 @@ This section computes and plots:
 3. Press **Run Section**.
 4. Examine figures titled “V\_e (V)” and each neuron’s $\Delta V_m$ subplot.
 
-### Section 2: Weighted 2D Interpolation & Layer‐wise Averages (Fig. 2C–E)
+### Section 2: Weighted 2D Interpolation & Layer‐wise Averages (Fig. 3C–E)
 
 This section simulates a population of rods randomly scattered according to known layer‐specific densities, computes each soma’s $\Delta V_m$, and generates:
 
