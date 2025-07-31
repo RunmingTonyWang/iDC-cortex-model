@@ -1,8 +1,8 @@
 %% Computational model of iDC‐induced neuronal polarization
 % Author: Runming Wang, Gene Fridman
-% 06/18/2025
+% 07/31/2025
 
-%% Section 1: Plot Ve due to iDC and ΔVm along different neuron types (Fig.2AB)
+%% Section 1: Plot Ve due to iDC and ΔVm along different neuron types (Fig.3AB)
 clc; clear;
 
 % 1) SETUP: GRID & ELECTRODE PARAMETERS
@@ -83,14 +83,14 @@ cmap = [linspace(0,1,128)' linspace(0,1,128)' ones(128,1); ...
 figure('Color','w');
 tiledlayout(4,4,'TileSpacing','compact','Padding','compact');
 
-% Ve subplot (Fig.2A)
+% Ve subplot (Fig.3A)
 ax=nexttile;
 imagesc(CorticalDistance,Depth,Ve,Ve_lims); colormap(ax,'parula'); caxis(Ve_lims);
 colorbar; title('V_e (V)'); xlabel('Lateral (mm)'); ylabel('Depth (mm)'); axis equal tight; 
 set(ax,'TickDir','out'); hold on;
 for L=layers; plot([min(CorticalDistance) max(CorticalDistance)], [L L],'--k'); end; hold off;
 
-% PNm subplots (Fig.2B)
+% PNm subplots (Fig.3B)
 for i=1:numel(neuronTypes)
     ax=nexttile;
     imagesc(CorticalDistance,Depth,PNm_all{i},PNm_lims); colormap(ax,cmap); caxis(PNm_lims);
@@ -106,7 +106,7 @@ end
 
 
 
-%% Section 2: Weighted 2D Interpolation and Layer-wise Average Versus Distance (Fig.2CDE)
+%% Section 2: Weighted 2D Interpolation and Layer-wise Average Versus Distance (Fig.3CDE)
 clc; clear;
 
 % 1) SETUP: GRID & ELECTRODE PARAMETERS
@@ -216,7 +216,7 @@ plot(somaX, somaY, 'ko', 'MarkerSize',6, 'LineWidth',1.5); % Plot soma markers
 hold off;
 
 
-% 5) WEIGHTED-SUM INTERPOLATION OF SOMA POTENTIALS (Fig.2CD)
+% 5) WEIGHTED-SUM INTERPOLATION OF SOMA POTENTIALS (Fig.3CD)
 nNeurons = length(somaX);
 somaPotential = zeros(1, nNeurons);
 for i = 1:nNeurons
@@ -256,7 +256,7 @@ end
 hold off;
 
 
-% 6) LAYER-WISE AVERAGE VS DISTANCE (Fig.2E)
+% 6) LAYER-WISE AVERAGE VS DISTANCE (Fig.3E)
 % Distances of interest (mm)
 hDists = [0.2, 0.55, 0.9, 1.25];
 nDist  = numel(hDists);
