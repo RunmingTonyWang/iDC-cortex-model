@@ -1,5 +1,5 @@
 # iDC-cortex-model
-This is a morphological approximation model that investigates how ionic direct current (iDC) stimulation modulates the membrane potential in rat cortical neurons. 
+This is a morphological approximation model that investigates how ionic direct current (iDC) modulates the membrane potential in rat cortical neurons. 
 The code generates:
 1. **Extracellular potential $V_e$** produced by a disk electrode on the pia mater and the corresponding **mirror‐estimate $\Delta V_m$** for multiple neuron types **(Fig. 3A–B)**.
 2. **Population‐level heatmaps** via weighted‐sum interpolation of soma potentials, and **layer‐wise averages** as a function of lateral distance **(Fig. 3C–E)**.
